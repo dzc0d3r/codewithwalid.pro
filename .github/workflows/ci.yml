@@ -58,14 +58,14 @@ jobs:
     needs: build
     steps:
       - name: Checkout code
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
 
       - name: Install pnpm
-        uses: pnpm/action-setup@4
+        uses: pnpm/action-setup@v4
 
 
       - name: Set up Node.js
-        uses: actions/setup-node@4
+        uses: actions/setup-node@v4
         with:
           node-version: "21"
           cache: pnpm
