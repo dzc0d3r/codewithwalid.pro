@@ -1,0 +1,25 @@
+{
+  "name": "@codewithwalid/lib",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "vitest run",
+    "lint": "eslint --fix ."
+  },
+  "exports": {
+    ".": "./utils.ts"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.9.1",
+    "postcss": "^8.4.41",
+    "react": "^18.3.1",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^2.5.2"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "codewithwalid",
+  "private": "true",
+  "version": "0.1.0",
+  "description": "",
+  "author": "dzc0d3r <walid.poet@gmail.com>",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "type-check": "turbo type-check",
+    "clean": "turbo clean",
+    "test": "vitest run --coverage",
+    "test:all": "turbo test",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx}\"",
+    "ui:add": "pnpm --filter @codewithwalid/ui ui:add"
+  },
+  "packageManager": "pnpm@9.8.0",
+  "engines": {
+    "node": ">=21"
+  },
+  "keywords": [
+    "monorepo",
+    "turbo",
+    "microfrontends",
+    "microservices"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.0.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "@vitest/coverage-v8": "^2.0.5",
+    "@vitest/ui": "^2.0.5",
+    "eslint": "^9.9.1",
+    "jsdom": "^25.0.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.6",
+    "turbo": "^2.0.14",
+    "vitest": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+    }
+  },
+  "lint-staged": {
+    "apps/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "packages/ui/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  }
+}

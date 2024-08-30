@@ -1,0 +1,9 @@
+{
+  "name": "@codewithwalid/eslint-config",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@eslint/compat": "^1.1.1",
+    "globals": "^15.9.0"
+  }
+}

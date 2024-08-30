@@ -1,0 +1,14 @@
+{
+  "extends": "@codewithwalid/typescript-config/nextjs.json",
+  "compilerOptions": {
+    "plugins": [{ "name": "next" }]
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "vitest.config.mts"
+  ],
+  "exclude": ["node_modules"]
+}
