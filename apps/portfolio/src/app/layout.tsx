@@ -1,5 +1,6 @@
-import "./globals.css"
+import "./globals.css";
 import "@codewithwalid/ui/styles/dist/globals.css"
+import { NavBar } from "@codewithwalid/ui/layout/navbar"
 import { ThemeProvider } from "@codewithwalid/ui/providers/theme-provider"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <NavBar />
           {children}
         </ThemeProvider>
       </body>

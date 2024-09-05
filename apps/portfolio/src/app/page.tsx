@@ -13,7 +13,7 @@ import SheetDemo from "@codewithwalid/ui/layout/sheet"
 export default function Page(): JSX.Element {
   return (
     <main className="grid min-h-screen place-content-center">
-      <div>
+      {/* <div>
         <h2 className="m-5 text-3xl">Here is a shared ui component for you</h2>
       </div>
       <div className="mx-auto my-2 flex w-full justify-center">
@@ -35,7 +35,7 @@ export default function Page(): JSX.Element {
           </SelectContent>
         </Select>
       </div>
-      <ThemeToggle />
+      <ThemeToggle /> */}
     </main>
   )
 }
