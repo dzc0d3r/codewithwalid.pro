@@ -8,11 +8,9 @@ const config: Pick<
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
-    "./layouts/**/*.{ts,tsx}",
+    "./layout/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
-    "../../packages/ui/components/**/*.{ts,tsx}",
-    "../../packages/apps/**/*.{ts,tsx}",
     "./styles/globals.css",
   ],
   theme: {
