@@ -1,4 +1,4 @@
-import { Button } from "@codewithwalid/ui/components/button";
+import { Button } from "@codewithwalid/ui/components/button"
 import {
   Select,
   SelectContent,
@@ -7,7 +7,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@codewithwalid/ui/components/select";
+} from "@codewithwalid/ui/components/select"
 
 export default function Page(): JSX.Element {
   return (
@@ -18,5 +18,5 @@ export default function Page(): JSX.Element {
         <Button className="mx-auto flex"> Great</Button>
       </div>
     </main>
-  );
+  )
 }

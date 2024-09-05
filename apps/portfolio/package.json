@@ -12,15 +12,17 @@
   },
   "dependencies": {
     "@codewithwalid/ui": "workspace:*",
+    "lucide-react": "^0.294.0",
     "next": "^14.2.3",
+    "next-themes": "^0.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^14.2.3",
     "@codewithwalid/eslint-config": "workspace:*",
     "@codewithwalid/tailwind-config": "workspace:*",
     "@codewithwalid/typescript-config": "workspace:*",
+    "@next/eslint-plugin-next": "^14.2.3",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",

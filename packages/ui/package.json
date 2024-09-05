@@ -8,12 +8,15 @@
     "dev": "tailwindcss -i ./styles/globals.css -o ./styles/dist/globals.css --watch",
     "build": "tailwindcss -i ./styles/globals.css -o ./styles/dist/globals.css",
     "type-check": "tsc --noEmit",
-    "ui:add": "pnpm dlx shadcn-ui@latest add",
+    "ui:add": "pnpm dlx shadcn@latest add",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-label": "^2.1.0",
     "@radix-ui/react-select": "^2.1.1",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
@@ -50,6 +53,8 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "eslint-plugin-storybook": "^0.8.0",
     "globals": "^15.9.0",
+    "next": "^14.2.3",
+    "next-themes": "^0.3.0",
     "postcss": "^8.4.35",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
@@ -63,5 +68,9 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "peerDependencies": {
+    "next": "^14.2.3",
+    "next-themes": "^0.3.0"
   }
 }

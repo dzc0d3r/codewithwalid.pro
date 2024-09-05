@@ -6,7 +6,9 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@codewithwalid/ui/components/select";
+} from "@codewithwalid/ui/components/select"
+import { ThemeToggle } from "@codewithwalid/ui/layout/navbar/toggle-theme"
+import SheetDemo from "@codewithwalid/ui/layout/sheet"
 
 export default function Page(): JSX.Element {
   return (
@@ -15,6 +17,8 @@ export default function Page(): JSX.Element {
         <h2 className="m-5 text-3xl">Here is a shared ui component for you</h2>
       </div>
       <div className="mx-auto my-2 flex w-full justify-center">
+        <SheetDemo />
+
         <Select>
           <SelectTrigger className="w-[180px]">
             <SelectValue placeholder="Select a fruit" />
@@ -31,6 +35,7 @@ export default function Page(): JSX.Element {
           </SelectContent>
         </Select>
       </div>
+      <ThemeToggle />
     </main>
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import sharedConfig from "@codewithwalid/tailwind-config";
-import type { Config } from "tailwindcss";
+import sharedConfig from "@codewithwalid/tailwind-config"
+import type { Config } from "tailwindcss"
 
 const config: Pick<
   Config,
@@ -8,13 +8,16 @@ const config: Pick<
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
+    "./layouts/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
-    "../../packages/cww-ui/components/**/*.{ts,tsx}",
+    "../../packages/ui/components/**/*.{ts,tsx}",
+    "../../packages/apps/**/*.{ts,tsx}",
+    "./styles/globals.css",
   ],
   theme: {
     container: {
-      center: true,
+      center: "true",
       padding: "2rem",
       screens: {
         "2xl": "1400px",
@@ -55,6 +58,13 @@ const config: Pick<
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -63,12 +73,20 @@ const config: Pick<
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0rem" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0rem",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0rem" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0rem",
+          },
         },
       },
       animation: {
@@ -79,6 +97,6 @@ const config: Pick<
   },
   plugins: [require("tailwindcss-animate")],
   presets: [sharedConfig],
-};
+}
 
-export default config;
+export default config
