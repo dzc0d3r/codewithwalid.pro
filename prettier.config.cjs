@@ -12,7 +12,7 @@ const config = {
     "@ianvs/prettier-plugin-sort-imports",
     "prettier-plugin-tailwindcss",
   ],
-  //proseWrap: "always", // printWidth line breaks in md/mdx
+  proseWrap: "always", // printWidth line breaks in md/mdx
   overrides: [
     {
       files: "*.css",

@@ -14,7 +14,8 @@
     "test:all": "turbo test",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx}\"",
-    "ui:add": "pnpm --filter @codewithwalid/ui ui:add"
+    "ui:add": "pnpm --filter @codewithwalid/ui ui:add",
+    "portfolio:dev": "concurrently -n 'ui,dev' -c 'blue,green' 'pnpm --filter @codewithwalid/ui dev' 'pnpm --filter portfolio dev --port 3001'"
   },
   "packageManager": "pnpm@9.8.0",
   "engines": {
@@ -34,6 +35,7 @@
     "@vitejs/plugin-react": "^4.3.1",
     "@vitest/coverage-v8": "^2.0.5",
     "@vitest/ui": "^2.0.5",
+    "concurrently": "^8.2.2",
     "eslint": "^9.9.1",
     "jsdom": "^25.0.0",
     "prettier": "^3.3.3",

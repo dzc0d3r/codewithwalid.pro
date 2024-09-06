@@ -14,8 +14,6 @@ export interface RoutesProps {
 
 const Links = ({ routes }: RoutesProps) => {
   const [hash, setHash] = useState<string | null>(null)
-
-  // Ensure the hash is only set on the client side
   useEffect(() => {
     if (typeof window !== "undefined") {
       setHash(window.location.hash)
@@ -29,8 +27,9 @@ const Links = ({ routes }: RoutesProps) => {
   }
 
   return (
-    <nav className="hidden flex-1 justify-center text-center md:block md:space-x-2">
-      {routes && routes.length > 0 ? (
+    <nav className="mx-auto hidden flex-1 justify-center md:flex md:space-x-2">
+      {routes &&
+        routes.length > 0 &&
         routes.map((route, i) =>
           route.href.startsWith("#") ? (
             <Link
@@ -39,9 +38,9 @@ const Links = ({ routes }: RoutesProps) => {
               onClick={() => handleClick(route.href)}
               className={`${buttonVariants(
                 route.href === hash
-                  ? { variant: "destructive" }
-                  : { variant: "ghost" },
-              )} duration-400 text-sm transition-all ease-in-out md:text-base`}
+                  ? { variant: "default", size: "rounded" }
+                  : { variant: "ghost", size: "rounded" },
+              )} duration-400 md:text-normal text-sm transition-all ease-in-out lg:text-base`}
             >
               {route.label}
             </Link>
@@ -49,16 +48,13 @@ const Links = ({ routes }: RoutesProps) => {
             <Link
               key={i}
               href={route.href}
-              className={`${buttonVariants({ variant: "ghost" })} duration-400 text-sm transition-all ease-in-out md:text-base`}
+              className={`${buttonVariants({ variant: "ghost", size: "rounded" })} duration-400 md:text-normal text-sm transition-all ease-in-out lg:text-base`}
               target="_blank"
             >
               {route.label}
             </Link>
           ),
-        )
-      ) : (
-        <p>No routes available</p>
-      )}
+        )}
     </nav>
   )
 }
