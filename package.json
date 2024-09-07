@@ -15,7 +15,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,mdx}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,mdx}\"",
     "ui:add": "pnpm --filter @codewithwalid/ui ui:add",
-    "portfolio:dev": "concurrently -n 'ui,dev' -c 'blue,green' 'pnpm --filter @codewithwalid/ui dev' 'pnpm --filter portfolio dev --port 3001'"
+    "portfolio:dev": "concurrently -n 'ui,dev' -c 'blue,green' 'pnpm --filter @codewithwalid/ui dev' 'pnpm --filter portfolio dev'",
+    "blog:dev": "concurrently -n 'ui,dev' -c 'blue,green' 'pnpm --filter @codewithwalid/ui dev' 'pnpm --filter blog dev'"
   },
   "packageManager": "pnpm@9.8.0",
   "engines": {

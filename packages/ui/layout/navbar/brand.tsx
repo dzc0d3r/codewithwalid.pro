@@ -7,7 +7,7 @@ export interface BrandProps {
 }
 const Brand = ({ withLogo = false, brand = "✧Wɐlᴉd✧" }: BrandProps) => {
   return (
-    <Link href="/" className="ml-4 flex items-center gap-2 lg:ml-0">
+    <Link href="/" className="flex items-center gap-2 lg:ml-0">
       {withLogo && (
         <Image
           src="/logo.svg"
@@ -17,7 +17,7 @@ const Brand = ({ withLogo = false, brand = "✧Wɐlᴉd✧" }: BrandProps) => {
           className="h-6 w-6 md:h-7 md:w-7"
         ></Image>
       )}
-      <h2 className="from-primary bg-gradient-to-r via-blue-700 to-teal-600 bg-clip-text text-xl font-semibold text-transparent md:text-2xl lg:text-3xl">
+      <h2 className="from-primary bg-gradient-to-r via-blue-500 to-teal-400 bg-clip-text text-xl font-semibold text-transparent md:text-2xl lg:text-3xl">
         {brand}
       </h2>
     </Link>

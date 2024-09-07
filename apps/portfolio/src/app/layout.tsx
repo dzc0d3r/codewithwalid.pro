@@ -13,10 +13,17 @@ export const metadata: Metadata = {
 }
 const routes = [
   {
+    showOnPath: "/",
     href: "#projects",
     label: "Projects",
   },
   {
+    showOnPath: "/",
+    href: "#summary",
+    label: "summary",
+  },
+  {
+    showOnPath: "/",
     href: "#testimonials",
     label: "Testimonials",
   },
@@ -27,6 +34,10 @@ const routes = [
   {
     href: "https://poetry.codewithwalid.pro",
     label: "Poetry",
+  },
+  {
+    href: "/test",
+    label: "test",
   },
 ]
 
@@ -40,6 +51,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NavBar links={routes} brand="✧Wɐlᴉd✧" />
+
           {children}
         </ThemeProvider>
       </body>
