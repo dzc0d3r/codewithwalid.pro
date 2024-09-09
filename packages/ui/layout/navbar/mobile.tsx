@@ -16,7 +16,7 @@ const MobileMenu = ({ links }: MobileMenuProps) => {
   return (
     <Sheet>
       <SheetTrigger>
-        <AlignLeft className="h-6 w-6 md:hidden" />
+        <AlignLeft className="h-6 w-6 lg:hidden" />
       </SheetTrigger>
       <SheetContent side="left" className="w-[300px] sm:w-[400px]">
         <nav className="grid h-full w-full place-content-center gap-4">

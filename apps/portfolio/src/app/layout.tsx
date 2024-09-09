@@ -35,10 +35,6 @@ const routes = [
     href: "https://poetry.codewithwalid.pro",
     label: "Poetry",
   },
-  {
-    href: "/test",
-    label: "test",
-  },
 ]
 
 export default function RootLayout({

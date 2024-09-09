@@ -61,11 +61,10 @@ const Links = ({ routes }: RoutesProps) => {
     const yRange = mapRange(0, bounds.height, -1, 1)(relativeY)
     x.set(xRange * 10)
     y.set(yRange * 10)
-    console.log(xRange)
   }
 
   return (
-    <nav className="mx-auto hidden flex-1 justify-center md:flex md:space-x-2">
+    <nav className="mx-auto hidden flex-1 justify-center lg:space-x-2 lg:flex">
       {routes && routes.length > 0 ? (
         <ul className="flex flex-row space-x-2">
           <AnimatePresence>
@@ -94,8 +93,8 @@ const Links = ({ routes }: RoutesProps) => {
                       href={route.href}
                       onClick={() => handleClick(route.href)}
                       className={`${route.showOnPath === path ? "flex" : "hidden"} ${buttonVariants(
-                        { variant: "ghost", size: "rounded" }
-                      )} duration-500 md:text-normal relative text-sm transition-all ease-in-out lg:text-base`}
+                        { variant: "ghost", size: "rounded" },
+                      )} md:text-normal relative text-sm transition-all duration-500 ease-in-out lg:text-base`}
                     >
                       <motion.span
                         style={{ x: textX, y: textY }}
