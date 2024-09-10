@@ -12,13 +12,12 @@ export interface HeaderProps {
 }
 const Header = ({ links, brand }: HeaderProps) => {
   return (
-    <header className="sticky top-0 z-50  items-center justify-center  bg-opacity-90 px-4 py-3 shadow-sm backdrop-blur-md md:container sm:flex sm:justify-between">
-      <div className="relative container  mx-auto max-w-7xl flex h-12 w-full items-center justify-between px-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-50 items-center justify-center bg-opacity-90 px-4 py-3 backdrop-blur-md md:container sm:flex sm:justify-between">
+      <div className="container relative mx-auto flex h-12 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
           {/* mobile menu */}
           <MobileMenu links={links} />
           {/* Brand */}
-          
         </div>
         <Brand brand={brand} />
         {/* Desktop Links */}

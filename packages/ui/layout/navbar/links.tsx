@@ -64,7 +64,7 @@ const Links = ({ routes }: RoutesProps) => {
                         <motion.div
                           transition={{ type: "spring" }}
                           layoutId="active"
-                          className={`border-primary absolute -bottom-4 w-[50%] -translate-y-1/2 transform border-b-[.2rem]`}
+                          className={`border-primary absolute -bottom-4 w-[50%] border-b-[.2rem]`}
                         ></motion.div>
                       ) : null}
                     </MotionLink>

@@ -10,20 +10,27 @@ export interface BrandProps {
 }
 
 const Brand = ({ withLogo = false, brand = "✧Wɐlᴉd✧" }: BrandProps) => {
-  // Stagger effect for the letters
-  const containerVariants = {
-    hidden: { opacity: 1 }, // Make sure the container is always visible
-    visible: {
-      opacity: 1, // Keep the opacity the same during the transition
+  // Rolling effect for the letters with delay
+  const letterVariants = {
+    initial: { opacity: 1, rotate: 0 }, // Ensure letters are always visible
+    animate: (index: number) => ({
+      opacity: 1,
+      rotate: 360, // Full rotation for the rolling effect
       transition: {
-        staggerChildren: 0.15, // delay between each letter
+        duration: 1, // Duration for each letter roll
+        ease: "easeInOut",
+        delay: index * 0.15, // Delay each letter based on its position
       },
-    },
+    }),
   }
 
-  const letterVariants = {
-    hidden: { opacity: 0.4, y: 20 }, // Make letters partially visible initially
-    visible: { opacity: 1, y: 0 }, // Fade and move the letters to their final position
+  // Subtle neon text shadow style based on the primary color
+  const gradientStyle = {
+    background:
+      "linear-gradient(to right bottom, #0c326a, #08518d, #0072af, #0094cf, #14b8ee);",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    color: "#000", // Fallback color
   }
 
   return (
@@ -39,12 +46,17 @@ const Brand = ({ withLogo = false, brand = "✧Wɐlᴉd✧" }: BrandProps) => {
       )}
       <motion.h2
         className="from-primary bg-gradient-to-r via-blue-500 to-teal-400 bg-clip-text text-2xl font-semibold text-transparent md:text-3xl lg:text-4xl"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
+        initial="initial"
+        animate="animate"
       >
         {brand.split("").map((letter, index) => (
-          <motion.span key={index} variants={letterVariants}>
+          <motion.span
+            key={index}
+            custom={index} // Pass index to animate each letter differently
+            variants={letterVariants}
+            className="text-primary" // Use Tailwind's text-primary for color
+            style={{ display: "inline-block", ...gradientStyle }} // Apply neon shadow
+          >
             {letter}
           </motion.span>
         ))}
